@@ -1,0 +1,45 @@
+#Solution 1 - First Try // Edge Case - [9,9]
+
+class Solution {
+    public int[] plusOne(int[] digits) {
+        int carry = 1; 
+        for(int i = digits.length - 1; i >= 0 ; i--) {
+            int value = digits[i] + carry;
+            digits[i] = val % 10;
+            if(value > 9) {
+                carry = 1;     
+            } else {
+                carry = 0;   
+            }   
+        }        
+        //Case of resizing array
+        if(carry == 1) {
+            int[] edgeCase = new int[digits.length + 1];
+            edgeCase[0] = 1;     
+            return edgeCase;
+        }
+        else
+             return digits;
+    }
+}
+
+#Solution 2- More readable code
+
+class Solution {
+    public int[] plusOne(int[] digits) {
+       for (int i = digits.length -1 ; i >= 0 ; i-- ) {
+           if(digits[i] < 9) {
+               digits[i]++;
+               return digits;
+           }
+           digits[i] = 0 ;
+       }
+        
+        int[] res = new int[digits.length + 1];
+        res[0] = 1;
+        return res;        
+    }
+}
+
+
+
