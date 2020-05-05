@@ -1,0 +1,29 @@
+#Solution 1 - First Code
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int ans_index = 0;
+        for(int j = 1 ;  j< nums.length ; j++) {
+            if(nums[ans_index] == nums[j]) {
+                continue;
+            } else {
+              nums[ans_index + 1] = nums[j];
+              ans_index++;
+            }       
+        }
+        return ans_index + 1;
+    }
+}
+
+
+#Solution 2 - Better Readability
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int ans_index = 0;
+        for(int j = 1 ;  j< nums.length ; j++) {
+            if(nums[ans_index] != nums[j]) {
+              nums[++ans_index] = nums[j];
+            }       
+        }
+        return ans_index + 1;
+    }
+}
