@@ -17,3 +17,10 @@ class Solution {
 }
 
 #Solution 2 - Using Binary Search
+
+
+
+#Solution 3- 1 line
+public int mySqrt(int x) {
+        return (int)(Math.pow(x,0.5));
+    }
