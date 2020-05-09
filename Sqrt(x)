@@ -1,0 +1,19 @@
+#Solution 1 - TLE for big inputs
+
+class Solution {
+    public int mySqrt(int x) {
+        int ans = 0, i =0;
+        for(i = 1 ; i <= x ; i++) {
+             ans = i * i;
+            if(ans == x) {
+                return i;
+            }
+            if(ans > x) {
+                break;
+            }
+        }
+        return i-1;
+    }
+}
+
+#Solution 2 - Using Binary Search
