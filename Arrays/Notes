@@ -1,0 +1,5 @@
+Static and Dynamic arrays <--->
+In java arrays are always located on heap -> int[] arr = new int[n]
+
+Dynamic arrays in java ---> ArrayList (resize automatically)
+
