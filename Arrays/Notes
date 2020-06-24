@@ -2,4 +2,9 @@ Static and Dynamic arrays <--->
 In java arrays are always located on heap -> int[] arr = new int[n]
 
 Dynamic arrays in java ---> ArrayList (resize automatically)
+Insert at end for static arrays - 0(1)
+Insert at beg/avg for static arrays - 0(n)
+
+Insert at end for dynamic arrays - 0(1) #We take copying arrays elements and creating a doubly sized array into account and still it is 0(1)
+
 
